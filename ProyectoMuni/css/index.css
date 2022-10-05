@@ -1,13 +1,58 @@
+.padre{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 65% 1fr;
+
+}
+img{
+  background:url("../img/fondo.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 720px;
+}
+.contenido{
+  background-color: #E1EBF4 ;
+}
 .formulario{
+  background-color: #F4F7F9;
+  text-align: center;
+  position: absolute;
+  top:50%;
+  left:82.6%;
+  transform: translate(-50%, -50%);
+    border: 2px solid black;
+    width: 400px;
+    height: 400px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.componentes{
     text-align: center;
     position: absolute;
-    top:50%;
+    top:60%;
     left:50%;
     transform: translate(-50%, -50%);
-
-  border: 2px solid black;
+}
+.botones{
+  margin-top: 20px;
+}
+input[type="text"],
+input[type="password"]{
+  width: 300px;
 }
 
-body{
-    background-color: bisque;
+.footer{
+  padding:10px;
+  width: 100%;
+  height:40px;
+  display: flex;
+  align-items:flex-end;
+  justify-content: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  position: absolute;
+    top:97%;
+    left:50%;
+    transform: translate(-50%, -50%);
 }
