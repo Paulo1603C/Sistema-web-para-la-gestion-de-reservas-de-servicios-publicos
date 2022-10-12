@@ -12,10 +12,11 @@ function getData(){
     .then ( data =>{
       console.log('datas');
         if( data != null ){
-          //console.log(data);  
+          console.log(data);  
           info.innerHTML = data;
         }else{
-            //alertUserNotFound();
+          window.location.href = "../index.php"
+          //alertUserNotFound();
         }
     }); 
 }

@@ -43,20 +43,22 @@ input[type="password"]{
   height: 45px;
   outline: none;
   border: 2px solid rgba(255, 0, 255, 0.25);
+  color:#468988;
 }
-
 .form_label{
   position: absolute;
   top:6px;
   left:20px;
   background:#FAFCFC;
   padding:5px;
+  transition: .6s;
 }
 .inputBox{
   position: relative;
   margin-bottom: 25px;
 }
-.form_input:focus+.form_label{
+.form_input:focus+ .form_label,
+.form_input:valid+ .form_label{
   transform: translateY(-1.6rem);
   transition: .6s;
   font-size: 18px;

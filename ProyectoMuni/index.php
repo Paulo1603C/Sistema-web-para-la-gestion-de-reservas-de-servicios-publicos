@@ -26,7 +26,7 @@
                     <h6 class="modal-title">MUNICIPIO DE PELILEO</h6>
                 </div>
                 <div  class="componentes">
-                    <form action="">
+                    <form action="" class="form">
                         <div class="inputBox">
                             <input type="text" required="required" id="usuario" class="form_input">
                             <label class="form_label" for="usuario">Usuario</label>

@@ -34,9 +34,9 @@ function comprobarUser(){
                 body: formaData
             } ).then( response => response.json() )
             .then ( data =>{
-                if( data != null ){
-                    window.location.href = "pages/main/template/principal.php?user="+aux1+"&&pass="+aux2;  
-                    //window.location.href = "Departamentos/SecretariaTecnica.php?v="+valor;  
+                console.log(data)
+                if( data == 'ok 200..' ){
+                    window.location.href = "pages/main/template/principal.php"; 
                 }else{
                     alertUserNotFound();
                 }

@@ -1,16 +1,3 @@
-
-<?php
-
-  session_start();
-//RECIBO DATOS POR LA URL
-    $username1 = isset($_REQUEST['user']) ? $_REQUEST['user'] : null;
-    $password1 = isset($_REQUEST['pass']) ? $_REQUEST['pass'] : null;
-
-//Guardo los datos de ssesion
-  $_SESSION['username'] = $username1;   
-  $_SESSION['password'] = $password1;   
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,6 +13,24 @@
   <!-- endinject -->
   <link rel="shortcut icon" href="../../../img/menu.png" />
 </head>
+<style>
+  .close{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 40px;
+    background:#CCD6E3;
+    border: 1px solid black;
+    border-radius:10px;
+  }
+  .btn{
+    clear: both;
+    text-decoration:none;
+    color:#03030C;
+    font-size: 14.5px;
+  }
+</style>
 <body>
   <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
@@ -48,7 +53,9 @@
         </ul>
         <ul class="navbar-nav navbar-nav-right">
           <li class="nav-item dropdown mr-0">
-            cerrar session
+            <div class="close">
+              <a href="../../../CadenaC/closeSession.php" class="btn">Cerrar Sesion</a>
+            </div>
           </li>
         </ul>
         <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
@@ -65,15 +72,26 @@
         <ul class="nav">
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-              <i class="typcn typcn-document-text typcn"></i>
-              <span class="menu-title">UI Elements</span>
-              <i class="menu-arrow"></i>
+                <span class="menu-title">CONSULTAS</span>
             </a>
-            <div class="collapse" id="ui-basic">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="https://www.youtube.com/watch?v=7T_09ueky2o&list=RDGMEM2VCIgaiSqOfVzBAjPJm-ag&index=12">Buttons</a></li>
-              </ul>
-            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <i class="typcn typcn-document-text typcn"></i>
+              <span class="menu-title">SRI</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <i class="typcn typcn-document-text typcn"></i>
+              <span class="menu-title">Registro Civil</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <i class="typcn typcn-document-text typcn"></i>
+              <span class="menu-title">ATN</span>
+            </a>
           </li>
           
         </ul>

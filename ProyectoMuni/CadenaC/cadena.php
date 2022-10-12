@@ -1,34 +1,24 @@
 <?php
 
     //archivo para establecer la conexion con la base de datos;
+    include "server.php";
     
-    $db = '(DESCRIPTION =
-    (ADDRESS = (PROTOCOL = TCP)
-    (HOST = 192.168.69.5)(PORT = 1521))
-    (CONNECT_DATA =
-    (SERVER = DEDICATED)
-    (SERVICE_NAME = cabildo)))';
-
     //recibo datos de index.js
     //$username1='GADSPP';
     $username1 = isset($_POST['user']) ? $_POST['user'] : null;
     //$password1='FEEDBACK17';
     $password1 = isset($_POST['pass']) ? $_POST['pass'] : null;
-    //$var_con = oci_connect($username1, $password1, $db, 'UTF8');
 
-    echo validarUsuarios($username1, $password1);
+    session_start();
+    $_SESSION['username'] = $username1;   
+    $_SESSION['password'] = $password1; 
 
+    $var_con = oci_connect($username1, $password1, $db, 'UTF8');
 
-    function validarUsuarios( $username1, $password1){
-        //$var_con = oci_connect($username1, $password1, $db, 'UTF8');
-        if ( $username1 != null )
-        {
-            return json_encode ("conectado");
-        }
-        else
-        {
-            return json_encode("No conecatdo");   
-        }
+   if ( $var_con == true ){
+        echo json_encode("ok 200..");   
+    }else{
+        echo json_encode ( "data no found" );
     }
 
 ?>
