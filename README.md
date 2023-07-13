@@ -3,6 +3,9 @@
 
  Sistema web para la gestión de reservas de servicios publicos. El sistema cuenta con un calendario para los usuarios puedan selecionar el dia y la fecha en los que estos necesitaran reservar cualquier servico publico ya sea servicios de autobus, servico de banda local,etc. Sistema diseñado para el `Municipio de Pelileo`
 
+![Captura de pantalla del portafolio web](MU1.jpg)
+![Captura de pantalla del portafolio web](AG2.jpg)
+
 ## Tecnologías utilizadas
 
 - HTML5
